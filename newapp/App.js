@@ -26,9 +26,7 @@ const authorize = require("./authorization")
 
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-const mailgun = require("mailgun-js");
-const DOMAIN = process.env.mailgun_domain;
-const mg = mailgun({apiKey: process.env.mailgun_apikey, domain: DOMAIN});
+
 
 const app=express();
 
