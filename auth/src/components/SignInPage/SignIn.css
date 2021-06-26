@@ -1,0 +1,190 @@
+.form-container {
+  margin-top: 100px;
+}
+
+.form-layout {
+  justify-content: center;
+  font-family: "Oxygen", sans-serif;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 26px;
+  color: rgb(253, 252, 251);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  color: rgb(250, 248, 246);
+  font-family: "Oxygen", sans-serif;
+}
+
+.login-input > input {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  width: 80vh;
+  height: 30px;
+  border: none;
+  color: rgb(247, 230, 223);
+  border-radius: 0px;
+  background-color: rgb(1, 37, 8);
+  padding: 7px;
+}
+
+.login-input {
+  padding-top: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  color: rgb(247, 230, 223);
+}
+
+.login-input > input:hover {
+  border: 1px solid white;
+}
+
+.login-input > input:focus {
+  outline-style: none;
+  border: 1px solid white;
+  background-color: rgb(247, 230, 223);
+  color: rgb(6, 44, 22);
+}
+
+.login-input a {
+  text-decoration: none;
+  color: rgb(185, 184, 184);
+  font-size: medium;
+}
+
+.login-input > label {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.both-form-contain {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 50vw;
+}
+
+.login-input button {
+  margin-right: 30px;
+  margin-bottom: 10px;
+  width: 10vw;
+  height: 35px;
+  color: rgb(255, 253, 253);
+  align-self: center;
+  border: 1px solid rgb(255, 253, 253);
+  border-radius: 5px;
+  background-color: rgb(2, 26, 11);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.login-input button:hover {
+  background-color: white;
+  color: rgb(11, 66, 9);
+}
+
+.login-input button:focus {
+  outline-style: none;
+  border: 0.75px solid rgb(2, 51, 8);
+}
+
+.register {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vh;
+  font-family: "Oxygen", sans-serif;
+  min-width: 40vw;
+  align-self: center;
+}
+
+.register a {
+  text-decoration: none;
+  color: rgb(185, 184, 184);
+  font-size: medium;
+}
+
+.forgot-password a {
+  text-decoration: none;
+}
+
+.forgot-password p {
+  font-size: 14px;
+  color: rgb(252, 252, 252);
+}
+
+.register a:hover {
+  text-decoration: underline;
+  color: rgb(252, 252, 252);
+  transform: scale(1.2);
+}
+
+.contain-register {
+  display: flex;
+  justify-content: center;
+}
+
+.error-response {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 11px;
+  font-weight: 400;
+  text-shadow: 0 0 10px #97f87a52;
+}
+
+.goog-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/*small Screen*/
+@media only screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .login-input > input {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 300px;
+    padding: 10px;
+  }
+  .title {
+    font-size: 25px;
+  }
+
+  .login-input button {
+    min-width: 100px;
+    height: 35px;
+    padding-bottom:5px;
+  }
+  .register a{
+    padding-right: 60px;
+  }
+}

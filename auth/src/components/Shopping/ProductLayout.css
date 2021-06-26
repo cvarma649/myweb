@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen", "sans-serif";
+}
+.contain {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  max-width: 97.5vw;
+  height: 65vh;
+  margin: auto;
+  align-content: flex-start;
+  margin-bottom: 10vh;
+}
+
+.nav2 {
+  margin: 0;
+  min-width: 97vw;
+  overflow: visible;
+  padding-top: 3vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav2 ul {
+  margin: 0 3.3vw;
+  padding-bottom: 3.8vh;
+  display: flex;
+  list-style-type: none;
+  text-align: left;
+  align-items: center;
+}
+
+.nav2 .ul-left li {
+  padding-right: 20px;
+}
+
+.nav2 ul li {
+  align-content: center;
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgb(176, 250, 101);
+  text-shadow: 0 0 10px #97f87aa9;
+}
+
+.nav2 img {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: 3.8vw;
+}
+.nav2 a {
+  cursor: pointer;
+}
+
+.ul-right p {
+  font-size: 1.2vw;
+  padding-bottom: 0.8vh;
+  padding-left: -10px;
+}
+
+.nav2 p {
+  display: flex;
+}
+
+.prod_container {
+  display: flex;
+  align-content: center;
+  white-space: nowrap;
+  overflow-x: scroll;
+  margin-bottom: 30px;
+}
+
+.prod_container::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+
+.prod_array {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 8vh;
+  margin-bottom: 1.8vh;
+}
+
+.prod {
+  flex-grow: 1;
+  margin: auto;
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.prod img {
+  cursor: pointer;
+  position: relative;
+  z-index: -3;
+  height: 55vh;
+  width: auto;
+  padding: 20px;
+  object-fit: contain;
+  filter: drop-shadow(5px 2px 15px rgb(0, 7, 2));
+}
+
+.prod h4 {
+  color: rgb(176, 250, 101);
+  text-shadow: 0 0 10px #97f87a57;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5vw;
+  align-content: space-between;
+}
+
+.prod p {
+  color: rgb(176, 250, 101);
+  text-shadow: 0 0 10px #97f87a77;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  padding-bottom: 1.29vh;
+}
+
+.prod button {
+  font-size: 1.2vw;
+  font-weight: 600;
+  padding: 0.8vh 0.8vw;
+  border-radius: 10px;
+  border: 1px solid rgb(2, 70, 19);
+  box-shadow: rgba(48, 248, 48, 0.349) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.384) 0px 18px 36px -18px inset;
+  color: rgb(255, 248, 242);
+  background-color: rgb(2, 19, 1);
+}
+
+.prod button:active {
+  box-shadow: rgba(1, 41, 1, 0.349) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.384) 0px 18px 36px -18px inset;
+  padding: 0.7vh 0.8vw;
+}
+
+.bach {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(1, 10, 1, 1) 91%,
+    rgba(0, 0, 0, 0.9360119047619048) 100%
+  );
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px #f0ffeb59;
+  font-family: "Oxygen", "sans-serif";
+  border: none;
+  padding: 20px;
+  line-height: 1.8;
+}
+
+/*small Screen*/
+@media only screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .contain {
+    margin-top: 11vh;
+    margin-bottom: 0px;
+    height: 2400px;
+  }
+  .nav2 {
+    margin-top: -0.2vh;
+    width: 290px;
+  }
+  .tippu {
+    width: 100px !important;
+    font: 18px;
+  }
+  .prod_array {
+    height: 2200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: -12px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+  }
+  .prod {
+    flex-grow: unset;
+    padding: 18px;
+  }
+  .prod img {
+    height: 30vh;
+    width: auto;
+    object-fit: contain;
+    padding: 10px;
+  }
+  .nav2 p {
+    font-size: 17px;
+  }
+  .nav2 img {
+    margin-top:3px;
+    height: 22px;
+    width:auto;
+  }
+  .ul-left p {
+    padding-right: 5px;
+  }
+  .ul-right p {
+    font-size: 11px;
+    padding-bottom: 0;
+  }
+  .nav2 ul li {
+    padding-right: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  .prod h4 {
+    font-size: 13px;
+  }
+  .prod button {
+    font-size: 11px;
+  }
+  .bach {
+    padding: 10px;
+    line-height: 1.8;
+    font-size: 13px;
+  }
+}

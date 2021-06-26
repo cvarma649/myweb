@@ -1,0 +1,42 @@
+.pop-button {
+  padding-left: 1.5vw;
+  padding-top: 0.2vh;
+  padding-bottom: 0.29vh;
+  padding-right: 1.5vw;
+  font-size: calc(9px+0.2vw);
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid rgb(2, 70, 19);
+  box-shadow: rgba(3, 65, 3, 0.349) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.384) 0px 18px 36px -18px inset;
+  border: none;
+  color: rgb(248, 252, 248);
+  background-color: rgb(1, 39, 1);
+  text-shadow: 0 0 10px #e7f7e26e;
+  text-align: center;
+  align-items: center;
+}
+
+.pop-button:hover {
+  background-color: rgb(159, 255, 62);
+  box-shadow: 0 0 10px #97f87a6e;
+  color: rgb(4, 17, 0);
+}
+
+/*small Screen*/
+@media only screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .pop-button {
+    font-size: 9px;
+    font-weight: 400;
+    margin-bottom: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 90px;
+    font-size: 11px;
+  }
+}
