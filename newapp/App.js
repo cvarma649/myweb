@@ -36,9 +36,10 @@ app.use(cors({
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true
 }));
+
 app.use(urlencoder);
 app.use(bodyJson);
-app.use(cookieParser())
+app.use(cookieParser(process.env.sessionSecret))
 app.use(session({
     key: "user_id",
     secret: process.env.sessionSecret,
