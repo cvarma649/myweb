@@ -37,7 +37,7 @@ function App() {
 
   const isAuth = async()=>{
     
-    const response = await fetch(`${baseUrl}/is_verify`,{
+    const response = await fetch(`/api/v1/is_verify`,{
       method:"GET",
       headers:{token: localStorage.token}
     })

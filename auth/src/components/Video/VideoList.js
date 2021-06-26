@@ -8,7 +8,7 @@ function VideoList() {
    const baseUrl = process.env.NODE_ENV === "production" ? "/api/v1":"http://localhost:5000"
    const getVideos = async()=>{
        try {
-        const res= await fetch(`${baseUrl}/uploads`,{
+        const res= await fetch(`/api/v1/uploads`,{
             method:"GET"
         })
         const jData = await res.json()

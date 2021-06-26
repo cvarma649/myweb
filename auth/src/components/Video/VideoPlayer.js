@@ -9,7 +9,7 @@ function VideoPlayer(props) {
 
         const getVideo=async()=>{
             try {
-                const res = await fetch(`${baseUrl}/uploads/${props.match.params.tid}`,{
+                const res = await fetch(`/api/v1/uploads/${props.match.params.tid}`,{
                     method:"GET"
                 })
                 const resvid= await res.json()

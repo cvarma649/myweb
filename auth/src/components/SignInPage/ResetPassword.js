@@ -12,7 +12,7 @@ function ResetPassword(props) {
     }
     const b=`const body = {password}
        
-    const res = await fetch("${baseUrl}/reset/${props.match.params.token}",{
+    const res = await fetch("/api/v1/reset/${props.match.params.token}",{
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(body)

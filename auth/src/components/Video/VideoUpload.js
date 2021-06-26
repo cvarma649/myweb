@@ -17,7 +17,7 @@ function VideoUpload() {
                 response=>{
                     console.log(response);
                     try {
-                        Axios.post(`${baseUrl}/upload`,response).then(
+                        Axios.post(`/api/v1/upload`,response).then(
                             res=>console.log(res)
                         )
                     } catch (error) {

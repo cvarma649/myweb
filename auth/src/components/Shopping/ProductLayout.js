@@ -22,7 +22,7 @@ function ProductLayout() {
    
    const getProducts = async()=>{
        try {
-           const response = await fetch(`${baseUrl}/products`,{
+           const response = await fetch(`/api/v1/products`,{
                method: "GET"
            })
            const jData = await response.json()
@@ -83,7 +83,7 @@ function ProductLayout() {
                        
                         { items.map( item => (
                         <div className="prod" key={item.product_id}>
-                            <Link to={`/products/${item.product_id}`}><img src={`${baseUrl}/image/${item.prod_image_id}`} alt={item.product_name}/></Link>
+                            <Link to={`/products/${item.product_id}`}><img src={`/api/v1/image/${item.prod_image_id}`} alt={item.product_name}/></Link>
                             
                             <h4>{item.product_name}</h4>
                             <p>₹{item.product_price}</p>

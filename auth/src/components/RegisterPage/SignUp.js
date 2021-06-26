@@ -14,7 +14,7 @@ function SignUp({setAuth}) {
     e.preventDefault(); 
     if(email.length>0 && password.length>0){
     try {
-        const response = await fetch(`${baseUrl}/signup`,{
+        const response = await fetch(`/api/v1/signup`,{
         method:"POST",
         headers: {"Content-Type":"application/json"},
         body: JSON.stringify(body)
