@@ -19,7 +19,7 @@ const Product=(props)=>{
     }})}
 
     const getProduct = async()=>{
-        const response = await fetch(`/api/v1/products/${props.match.params.id}`,{
+        const response = await fetch(`${baseUrl}/products/${props.match.params.id}`,{
             method: "GET"
         })
         const parseRes = await response.json()
@@ -55,7 +55,7 @@ const Product=(props)=>{
             <div className="items1" key={product.product_id}>
                 <div className="left-items1">
 
-                   <img src={`/api/v1/image/${product.prod_image_id}`} alt=""/>
+                   <img src={`${baseUrl}/image/${product.prod_image_id}`} alt=""/>
                 </div>
                 <div className="non-image">
                 <div className="mid-items1">
