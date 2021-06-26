@@ -41,11 +41,11 @@
       "react-app/jest"
     ]
   },
-  "proxy":{
-    "/api/v1":{
-      "target":"http://localhost:5000"
-  }},
-
+  "proxy": {
+    "/api/v1": {
+      "target": "http://localhost:5000"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.2%",
