@@ -25,7 +25,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const authyn = isAuthenticated? true : false
 
-  const baseUrl = process.env.NODE_ENV === "production" ? "/api/v1":"http://localhost:5000"
+  const baseUrl = process.env.NODE_ENV === "production" ? "/api/v1" : "http://localhost:5000"
 
   function logout(e){
     e.preventDefault();
@@ -37,7 +37,7 @@ function App() {
 
   const isAuth = async()=>{
     
-    const response = await fetch(`/api/v1/is_verify`,{
+    const response = await fetch(`${baseUrl}/is_verify`,{
       method:"GET",
       headers:{token: localStorage.token}
     })
