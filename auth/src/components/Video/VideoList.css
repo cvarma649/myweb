@@ -17,7 +17,6 @@
 
 .tidle {
   align-items: top;
-
   color: rgb(178, 252, 105);
   font-size: 2.2vw;
   text-shadow: 0 0 10px #97f87a52;
@@ -29,6 +28,9 @@
   max-width: 95vw;
 }
 
+.tidle h2{
+font-size:18px;
+}
 .img-contain img {
   align-self: center;
   cursor: pointer;
