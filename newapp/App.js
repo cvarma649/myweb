@@ -238,7 +238,7 @@ app.get("/api/v1/products", async(req,res,next )=>{
 //image upload & retrieval
 const knex11 = knex({
     client: "pg",
-    connection: "postgres:postgres:0707@localhost:5432/myweb",
+    connection: "postgres://ubuntu:0707@localhost:5432/myweb",
     pool:{min: 0, max:100}
 })
 
