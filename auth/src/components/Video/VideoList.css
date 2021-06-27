@@ -28,9 +28,9 @@
   max-width: 95vw;
 }
 
-.tidle h2{
-font-size:18px;
-}
+  .tidle h2 {
+  font-size:18px;
+  }
 .img-contain img {
   align-self: center;
   cursor: pointer;
