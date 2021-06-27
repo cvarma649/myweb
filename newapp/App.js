@@ -282,7 +282,7 @@ app.get("/api/v1/image/:prod_images_id", async(req,res)=>{
             )
         }
     ).catch(
-        err=> res.status(403).json({success:false, message:"Not fund", stack:err.stack})
+        err=> res.status(400).json({success:false, message:"Not fund", stack:err.stack})
 )})
 
 
