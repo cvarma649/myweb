@@ -122,7 +122,7 @@ const content=
                 <div className="contain-register">      
                 <div className="register">
                 <Link to="/signup">New here? Sign up!</Link>
-                <ProductPop className="tippu" content={content}/>
+                 <ProductPop className="tippu" content={content} placement="left-start" maxWidth="400px" interactiveBorder={4}/>
                 </div>
                 </div>
                 </div>
