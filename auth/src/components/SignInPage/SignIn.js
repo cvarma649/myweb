@@ -25,10 +25,10 @@ function SignIn({setAuth}) {
                     body: JSON.stringify(body)
                 })
                 const parseRes = await response.json();
+                if(parseRes.auth === true){
                 localStorage.setItem("token", parseRes.token);
                 localStorage.setItem("user_name", parseRes.user.name)
                 localStorage.setItem("user_email", parseRes.user.email)
-                if(parseRes.auth === true){
                 setAuth(true);
                 }else{
                  setErrResponse(parseRes)
