@@ -36,11 +36,7 @@ function CartItem({item}) {
     const truncate = (string,n)=>{
         return string?.length < n ? string : string.substr(0,n-1) +"..."
     }
-    const desc=`jhfgjdhjghdfjdhjd
-    hvjfdjvhfdjvjhgjhgfhjvgfjgvjhfgvjhghjg
-    vhgfvhjgfjgvjhgfvjhfgvhfhvbhfvhhggfhgfhgvbfh
-    bmhjbjhbjmhfvjfxbvjxhchjxjvbjhxhhvhgvghjmxvxhjbfvhfg
-    jdfjhbvjhfjmhdfgdjjhgfjdhj`
+    
 
     
     return (    
@@ -53,10 +49,8 @@ function CartItem({item}) {
                     <div className="prod_name">{item.product_name}</div>
         
                     <div className="prod_desc">
-                        {truncate(item.product_description, 100)}
-                        {truncate(desc,100)}
-                    </div>
-            
+                        {truncate(item.product_description, 120)}                        
+                    </div>       
                     <div className="prod_quantity">
                         <span><input type="number" defaultValue={qty} onChange={handleChange} min="1"/></span>
                         <span><button className="butty" onClick={()=>removeItem(item.product_id)}><h4>Remove From Cart</h4></button></span>
