@@ -228,13 +228,12 @@
   .prod button {
     font-size: 11px;
   }
-  .bach {
+
+    .bach {
     padding: 10px;
     line-height: 1.8;
     font-size: 13px;
     width: 55vw;
-    margin-top: -12px;
-    margin-right: 12px;
-    margin-left: -20px;
   }
+  
 }
