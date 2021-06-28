@@ -61,7 +61,8 @@ app.use(function (req, res, next) {
 
 
 app.post("/api/v1/signup", urlencoder, async(req,res, next)=>{
-    const {name, email, password} = req.body
+     const {name, crude_email, password} = req.body
+    const email = String(crude_email).toLowerCase();
     const validateEmail=(email)=>{
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return  re.test(String(email).toLowerCase());}
