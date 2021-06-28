@@ -140,16 +140,19 @@
 }
 
 .error-response {
-  position: fixed;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: -40px;
-  margin-bottom: 30px;
+  align-content: center;
+  margin-top: -10px;
+  margin-bottom: -15px;
+}
+
+.error-response p {
+  position: fixed;
   color: rgb(255, 255, 255);
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 400;
-  text-shadow: 0 0 10px #97f87a52;
+  text-shadow: 0 0 15px #97f87a52;
 }
 
 .goog-login {
