@@ -190,4 +190,10 @@
   .register a{
     padding-right: 60px;
   }
+  .bach{
+    width: 65vw;
+    margin-top: -12px;
+    margin-right: 12px;
+    margin-left: -20px;
+  }
 }
