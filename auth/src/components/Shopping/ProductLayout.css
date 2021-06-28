@@ -188,7 +188,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding-top: -12px;
+    padding-top: -18px;
     padding-bottom: 20px;
     margin-bottom: 0px;
   }
@@ -197,7 +197,7 @@
     padding: 18px;
   }
   .prod img {
-    height: 30vh;
+    height: 31vh;
     width: auto;
     object-fit: contain;
     padding: 10px;
