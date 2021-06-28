@@ -92,7 +92,7 @@ const content=
            
             <div className="form-container">
                 <p className="title">Hey! Login First :D</p> 
-                <div className="error-response">{errResponse}</div>
+                <div className="error-response"><p>{errResponse}</p></div>
                 <div className="form-layout">
                 <form className="login-form" onSubmit={login} method="POST">
                     <div className="login-input">
