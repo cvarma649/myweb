@@ -8,12 +8,13 @@ import GoogleLogin from "react-google-login";
 
 function SignIn({setAuth}) {  
     
-    const [email, setEmail] = useState("")
+    const [c_email, setC_email] = useState("")
     const [password, setPassword] = useState("")
     const [errResponse, setErrResponse]=useState("")
     const baseUrl = process.env.NODE_ENV === "production" ? "/api/v1":"http://localhost:5000"
 
     const login = async(e)=>{
+        const email = c_email.toLowerCase()
         const body = {email, password}
         e.preventDefault();
         if(email.length>0 && password.length>0){
@@ -96,7 +97,7 @@ const content=
                 <form className="login-form" onSubmit={login} method="POST">
                     <div className="login-input">
                         <label htmlFor="email">Email</label>
-                        <input id="email" value={email} onChange={e=>setEmail(e.target.value)} type="text"/>
+                        <input id="email" value={c_email} onChange={e=>setC_email(e.target.value)} type="text"/>
                     </div>
                     <br/>
                     <div className="login-input">
