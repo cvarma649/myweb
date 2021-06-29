@@ -11,7 +11,7 @@ function SignIn({setAuth}) {
     const [c_email, setC_email] = useState("")
     const [password, setPassword] = useState("")
     const [errResponse, setErrResponse]=useState("")
-    const baseUrl = process.env.NODE_ENV === "production" ? "/api/v1":"http://localhost:5000"
+     const baseUrl = process.env.NODE_ENV === "production" ? "/api/v1":"http://localhost:5000/api/v1"
 
     const login = async(e)=>{
         const email = c_email.toLowerCase()
