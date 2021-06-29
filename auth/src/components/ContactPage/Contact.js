@@ -11,7 +11,7 @@ function Contact() {
         e.preventDefault()
         const body={email,message}
         if(email.length>0 && message.length>0){
-        const res= await fetch(`${baseUrl}/contact`,{
+        const res= await fetch(`/api/v1/contact`,{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(body)
@@ -33,7 +33,7 @@ else{
             <form className="contact-form" onSubmit={hire} method="POST">
                 <div className="contact-input">
                     <label htmlFor="hiring_email">Your Email</label>     
-                    <input id="hiring_email" value={email} onChange={e=>setEmail(e.target.value)} type="email"/> 
+                    <input id="hiring_email" value={email} onChange={e=>setEmail(e.target.value)} type="text"/> 
                 </div>
                 <div className="contact-input">
                     <label htmlFor="message">Your Message</label>
