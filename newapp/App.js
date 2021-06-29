@@ -26,7 +26,9 @@ const authorize = require("./authorization")
 
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-
+const mailgun = require("mailgun-js");
+const DOMAIN = 'chhavivarma.com';
+const mg = mailgun({apiKey: process.env.mailgun_api, domain: DOMAIN});
 
 const app=express();
 
@@ -57,7 +59,7 @@ app.use(function (req, res, next) {
   });
 
 
-//for bhideo
+
 
 
 app.post("/api/v1/signup", urlencoder, async(req,res, next)=>{
@@ -182,8 +184,7 @@ app.get("/api/v1/is_verify", authorize, async(req,res, next)=>{
          res.json(true)
          next();
     } catch (err) {
-        console.error(err.message)
-        res.status(403).json("Server Error")
+          console.log("Not verified Yet")
     }
 })
 
@@ -331,5 +332,97 @@ app.put("/api/v1/uploads/:id", async(req,res,next)=>{
         console.error(err.message)
     }
 })
+
+//Forgot/Reset Password//
+
+
+app.put("/api/v1/forgot_password", async(req,res,next)=>{
+    const {email}=req.body
+    try {
+        const user=await pool.query("SELECT * FROM users WHERE email=$1",[email])
+        if(user.rows.length>0){
+                const token = jwtGenerator(user.rows[0].user_id);
+                 req.session.user = user    
+                 try {
+                    const newResetLink = await pool.query("UPDATE users SET reset_link=$1 WHERE email=$2 RETURNING *",[token,email])
+                     res.json({user_id:newResetLink.rows[0].user_id, reset_link:newResetLink.rows[0].reset_link, message:"Reset link has been sent!"});
+                    if(newResetLink){
+                        try {
+                            const data={
+                                from: 'noreply@chhavi_webtechnologies.com',
+                                to: email,
+                                subject:"Reset Password",
+                                html: ` <p>Hi ${ await newResetLink.rows[0].name}</p>
+                                        <a href="https://chhavivarma.com/reset-password/${await newResetLink.rows[0].reset_link}">${await newResetLink.rows[0].reset_link}</a>
+                                         <p>Please Click on Above Link to Reset your Password.</p>
+                                         
+                                         <p>Team,</p>
+                                         <p>Chhavi Web Technologies</p>`}
+                            
+                             await mg.messages().send(data, function (error, body) {
+                                console.log(body);
+                           
+                            })
+                        } catch (error) {
+                            console.error(error.message)
+                        }    }
+                    else{
+                    res.json({message:"Link Not updated yet"})
+                    }
+            } catch (error) {
+                console.error(error.message)
+            }}
+          
+            
+        else{
+            res.json({message:"User Doesn't Exist"})    
+        }
+    } catch (error) {
+        console.error(error.message)
+    }
+   
+})
+
+
+
+app.put("/api/v1/reset-password/:jT", urlencoder, async(req,res,next)=>{
+     const {password}=req.body
+     const {jT}=req.params
+     const bcryptPassword = await bcrypt.hash(password, saltRounds);
+     try {
+        const resetPassword= await pool.query("UPDATE users SET password=$1 WHERE reset_link=$2",[bcryptPassword,jT])
+        res.json({resetAuth:true, message:"Password Reset Susscessful!"})
+        next();
+     } catch (error) {
+         res.json("Table not updating")
+     }
+    
+     
+})
+
+
+////////////////////////////////Contact//////////////////////////////
+
+
+app.post("/api/v1/contact", async(req,res)=>{
+    const {message,email}=req.body
+    try {
+        const data={
+            from: email,
+            to:"cvarma649@gmail.com",
+            subject:"Reset Password",
+            text: message
+                    }
+        
+         await mg.messages().send(data, function (error, body) {
+            console.log("Hire Mail Sent");})
+            res.json("Hire Mail Sent Successfully")
+    } catch (error) {
+        console.error(error.message)
+    }
+})
+
+
+/////////////////////////////////////////////////////////////////////
 
 module.exports = app;
