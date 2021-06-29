@@ -5,7 +5,7 @@ function Contact() {
     const [email, setEmail]=useState(()=>localStorage.getItem("user_email") || "")
     const [message,setMessage]=useState("")
     const [successMessage, setSuccessMessage]=useState("")
-    
+        const baseUrl = process.env.NODE_ENV==="production"? "/api/v1":"http://localhost:5000/api/v1"
     
    const hire =async(e)=>{
         e.preventDefault()
