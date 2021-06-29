@@ -230,6 +230,9 @@
   }
 
     .bach {
+     width: 65vw;
+    padding-top: 40px;
+    padding-bottom: 40px;
     padding: 10px;
     line-height: 1.8;
     font-size: 13px;
