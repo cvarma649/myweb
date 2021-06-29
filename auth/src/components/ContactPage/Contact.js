@@ -37,9 +37,7 @@ else{
                 </div>
                 <div className="contact-input">
                     <label htmlFor="message">Your Message</label>
-                    <textarea id="message" value={message} onChange={e=>setMessage(e.target.value)} type="text" rows="4" cols="65"/>
-                    <textarea id="small-message" value={message} onChange={e=>setMessage(e.target.value)} type="text" rows="22" cols="41"/>
-
+                    <textarea id="message" value={message} onChange={e=>setMessage(e.target.value)} type="text" />
                 </div>
                 <div className="submit">
                 <button  type="submit">Hire Me!</button>
