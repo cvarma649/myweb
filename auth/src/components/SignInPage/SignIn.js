@@ -75,7 +75,7 @@ const responseGoogleF=(res)=>{
 }
 
 const content=
-   <div className="bach">
+   <div className="bach1">
        {`
        A users table has been set up in a Postgresql Database. The name, password and email of every user is saved 
        in Database, where the password is crypted and email validated via Reg Ex. There are Jason Web Tokens that are generated on authentication
