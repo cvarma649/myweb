@@ -5,22 +5,38 @@ import "./ResetPassword.css"
 function ResetPassword(props) {
     const [password, setPassword]= useState("")
     const [password1, setPassword1]= useState("")
-    const baseUrl = process.env.NODE_ENV==="production"? "/api/v1":"http://localhost:5000"
+    const [successMessage, setSuccessMessage]=useState("")
+    const baseUrl = process.env.NODE_ENV==="production"? "/api/v1":"http://localhost:5000/api/v1"
 
-    const reset= async(e)=>{
-        e.preventDefault();     
+     const reset= async(e)=>{
+        e.preventDefault();
+        const body = {password}   
+        if(password.length>0){
+        console.log("Reset in progress") 
+        if(password===password1){  
+        const res = await fetch(`${baseUrl}/reset-password/${props.match.params.jT}`,{
+            method: "PUT",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(body)
+        })
+        const parseRes= await res.json()
+        console.log(parseRes);
+        if(parseRes.resetAuth===true){
+        setSuccessMessage("Password Reset! You can Sign In Now!");
+        return <Redirect to="/signin"/>
+        }
+        else{
+            setSuccessMessage("something went wrong")
+        }
+        }
+    else{
+        setSuccessMessage("Password doesn't match")
+    }}
+        else{
+            setSuccessMessage("Type Something")
+        }
     }
-    const b=`const body = {password}
-       
-    const res = await fetch("/api/v1/reset/${props.match.params.token}",{
-        method: "PUT",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(body)
-    })
-    const parseRes = await res.json();
-    console.log(parseRes)
-    <Redirect to="/signin"/>
-    })`
+   
      
     return (
         <div>
@@ -35,6 +51,7 @@ function ResetPassword(props) {
                     <label htmlFor="password1"> Re-Type Password</label>
                     <input id="password1" value={password1} onChange={e=>setPassword1(e.target.value)} type="password"/>
                 </div>
+                <div className="success-message1"><p>{successMessage}</p></div>
                 <div className="submit">
                 <button  type="submit">Reset Password</button>
                 </div>
@@ -46,4 +63,4 @@ function ResetPassword(props) {
     )
 }
 
-export default ResetPassword
+export default ResetPassword;
