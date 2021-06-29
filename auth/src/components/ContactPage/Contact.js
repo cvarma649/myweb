@@ -2,23 +2,29 @@ import React,{useState} from 'react';
 import "./Contact.css";
 
 function Contact() {
-    const [email, setEmail]=useState(()=>localStorage.getItem("user_email")||"")
+    const [email, setEmail]=useState(()=>localStorage.getItem("user_email") || "")
     const [message,setMessage]=useState("")
     const [successMessage, setSuccessMessage]=useState("")
-    const hire =async(e)=>{
+    
+    
+   const hire =async(e)=>{
         e.preventDefault()
+        const body={email,message}
+        if(email.length>0 && message.length>0){
+        const res= await fetch(`${baseUrl}/contact`,{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(body)
+        }) 
+        const parseRes= await res.json();
+        console.log(parseRes)
+        setSuccessMessage("Mail Sent! You will be contacted within 24hrs!")
     }
-    const b= `
-    const body={email,message}
-    const res= await fetch("/api/v1/hireme",{
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify(body)
-    }) 
-    const parseRes= res.json();
-    setSuccessMessage("Mail Sent! You will be contacted within 24hrs!")
-    `
-
+else{
+    setSuccessMessage("Both Feilds Required")
+}
+   }
+   
     return (
         <div>
             
@@ -38,7 +44,7 @@ function Contact() {
                 <div className="submit">
                 <button  type="submit">Hire Me!</button>
                 </div>
-                <div className="success-message">{successMessage}</div>
+                <div className="success-message"><p>{successMessage}</p></div>
                 <div className="contact-list">
                     <ul>
                         <li>Chhavi Varma</li>
