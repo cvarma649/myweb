@@ -63,7 +63,7 @@ function App() {
           <Route exact path="/signin" render={props=> !isAuthenticated ? <SignIn  {...props} setAuth={setAuth}/>: <Redirect to="/"/>}/>
           <Route exact path="/signup" render={props=> !isAuthenticated ? <SignUp  {...props} setAuth={setAuth}/>: <Redirect to="/"/>}/>
           <Route exact path="/forgot-password" render={props=> <ForgotPassword {...props}/>}/>
-          <Route exact path="/reset-password" render={props=> <ResetPassword {...props}/>}/>
+          <Route exact path="/reset-password/:jT" render={props=> <ResetPassword {...props}/>}/>
           <Route exact path="/cart" render={props=> isAuthenticated ? <Cart {...props} /> :<Redirect to="/signin"/> }/>
           <Route exact path="/about" component={About}/>
           <Route exact path="/products/:id" render={props=> <Product {...props} />}/>
