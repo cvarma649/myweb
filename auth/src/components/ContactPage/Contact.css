@@ -112,19 +112,27 @@
   border: 0.75px solid rgb(2, 51, 8);
 }
 
-#message {
+#message[type="text"],
+select,
+textarea {
   height: 120px;
+  width: 40vw;
+  padding: 10px;
+  border-radius: 4px;
+  resize: vertical;
 }
+
 
 #small-message {
   display: none;
 }
 
 .success-message {
-  position: fixed;
   color: rgb(255, 253, 253);
   text-shadow: 0 0 10px #f0ffeb79;
-  font-size: 17px;
+}
+.success-message p {
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -136,22 +144,14 @@
   .contact-input input {
     width: 78vw;
   }
-  #message {
-    display: none;
-  }
-  #small-message {
-    background-color: rgb(5, 41, 3);
-    border: none;
-    display: unset;
-  }
-  #small-message:hover {
-    border: 1px solid white;
-  }
-  #small-message:focus {
-    outline-style: none;
-    border: 1px solid white;
-    background-color: rgb(247, 230, 223);
-    color: rgb(6, 44, 22);
+ #message[type="text"],
+  select,
+  textarea {
+    height: 200px;
+    width: 80vw;
+    padding: 10px;
+    border-radius: 4px;
+    resize: vertical;
   }
   .contact-form button {
     width: 100px;
