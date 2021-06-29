@@ -31,7 +31,7 @@ function ForgotPassword() {
             <form className="login-form11" onSubmit={sendResetLink} method="POST">
                 <div className="login-input11">
                     <label htmlFor="email">Email</label>     
-                    <input id="email" value={email} onChange={e=>setEmail(e.target.value)} type="email"/> 
+                    <input id="email" value={email} onChange={e=>setEmail(e.target.value)} type="text"/> 
                 </div>
                 <div className="submit">
                 <button  type="submit">Send Reset Link</button>
