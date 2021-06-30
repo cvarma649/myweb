@@ -34,9 +34,9 @@ function SignIn({setAuth}) {
                  setErrResponse(parseRes)
                  setAuth(false)
                 }
-                console.log(parseRes)
+                
             } catch (error) {
-                console.error(error.message)
+                console.log("Something Went Wrong")
             }
         }else{
             setErrResponse("Type Something!")
@@ -58,7 +58,6 @@ const responseGoogleS=async(res)=>{
             body: JSON.stringify(body)
         })
         const parseRes = await response.json();
-        console.log(parseRes)
         setAuth(true);
         localStorage.setItem("token", parseRes.token)
         localStorage.setItem("user_name", parseRes.user.g_user_name)
