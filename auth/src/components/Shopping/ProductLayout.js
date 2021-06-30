@@ -70,7 +70,7 @@ function ProductLayout() {
                     <ul className="ul-left">
                         <li><p>Shop for Keys</p></li>
                         
-                        <li><ProductPop className="tippu" content={content} placement="left"/></li>
+                        <li><ProductPop className="tippu" content={content} placement="bottom"/></li>
                         </ul>
                         <ul className="ul-right">
                         <li><Link to="/cart"><img src={`${process.env.PUBLIC_URL}/assets/cart.png`} alt="cart"/></Link></li>
