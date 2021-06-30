@@ -33,7 +33,7 @@ function ProductLayout() {
             }
         })     
        } catch (err) {
-           console.error(err.message)
+           console.log("Something Went Wrong")
        }
    }
   
