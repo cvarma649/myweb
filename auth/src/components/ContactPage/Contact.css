@@ -156,4 +156,9 @@ textarea {
   .contact-form button {
     width: 100px;
   }
+  .success-message p {
+  font-size: 11px;
+ width:70vw;
+    
+}
 }
