@@ -9,9 +9,12 @@ function About() {
                 {`
                     Hey! Ever wondered what happens when someone sets out on a journey to learn "Programming" 
                     with no Computer Science background what-so-ever, no curriculum, no Table of Contents, no mentor, no-one to ask
-                    your doubts to, just a glut of information to read, tutorials to watch and infinite hints on Stack Overflow! 
+                    your doubts to, just a glut of information to read, tutorials to watch and endless codes on Stack Overflow! 
+                    Either you give up after a few hours of tutorials or the whole pursuit turns into an thrilling game 
+                    giving you that adrenaline rush as you crush one level after another.
                     What I can tell you for sure is, all the talks of "Be passionate about what you do", 
-                    "Work Hard, Work Smart", "Do what you Love" start to make a lot of sense. `}
+                    "Work Hard, Work Smart", "Do what you Love" start to make a lot of sense.
+                    `}
                 <br/>
                 <br/>
                 {`
@@ -25,7 +28,7 @@ function About() {
                 <br/>
                 <br/>
                 {`
-                    Other than development itself, on this odyssey, I saw myself display a great deal of perseverance, problem solving skills,
+                    Other than development itself, on this odyssey, I found myself learning a great deal of perseverance, problem solving skills,
                     patience and an uncanny ability and desire to learn whatever I set my mind to. I write this on 18-06-2021, and I dare say
                     I feel absolutely ecstatic with how far I have come!
                 `}
