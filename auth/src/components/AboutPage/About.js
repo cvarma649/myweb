@@ -8,7 +8,7 @@ function About() {
            <div className="about-main">
                 {`
                     Hey! Ever wondered what happens when someone sets out on a journey to learn "Programming" 
-                    with no Computer Science background what-so-ever, no curriculum, no table of Contents, no mentor, no-one to ask
+                    with no Computer Science background what-so-ever, no curriculum, no Table of Contents, no mentor, no-one to ask
                     your doubts to, just a glut of information to read, tutorials to watch and infinite hints on Stack Overflow! 
                     What I can tell you for sure is, all the talks of "Be passionate about what you do", 
                     "Work Hard, Work Smart", "Do what you Love" start to make a lot of sense. `}
@@ -25,7 +25,7 @@ function About() {
                 <br/>
                 <br/>
                 {`
-                    Other than development istself, on this odyssey, I saw myself display a great deal of perseverance, problem solving skills,
+                    Other than development itself, on this odyssey, I saw myself display a great deal of perseverance, problem solving skills,
                     patience and an uncanny ability and desire to learn whatever I set my mind to. I write this on 18-06-2021, and I dare say
                     I feel absolutely ecstatic with how far I have come!
                 `}
