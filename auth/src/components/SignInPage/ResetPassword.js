@@ -20,7 +20,7 @@ function ResetPassword(props) {
             body: JSON.stringify(body)
         })
         const parseRes= await res.json()
-        console.log(parseRes);
+   
         if(parseRes.resetAuth===true){
         setSuccessMessage("Password Reset! You can Sign In Now!");
         return <Redirect to="/signin"/>
