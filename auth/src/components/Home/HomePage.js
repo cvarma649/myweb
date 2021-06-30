@@ -29,12 +29,10 @@ function HomePage({auth}) {
         getName()
       })
    const content= <div className="bach2">
-      {`This is a Mock Shop, connected to a real database. There are provisional tables in the database for orders and carts, dynamic to the user, but they have not been used for the sake of simplicity. 
-      A Postgresql Database was set up with the help of NodeJs and ExpressJs to store all the products with
-      their names, prices, descriptions, images etc. Owing to their small number, product images were stored locally via Multer and knex and then saved in the form of 
-      filename and mimetype to database that can be used in urls to access the respective images. 
-      Use Reducer and Use Context Hooks used for State management of the product quantity and in-cart management. 
-      Ps: You will not be able to access the Cart or the Video server untill you are authenticated.`}</div>
+      {`This website is a ReactJs website built with the help of NodeJs with an Express Server and Postgresql Database. An 
+      Nginx server was used to configure the server proxy on an AWS EC2 Ubuntu 20.0.4 server. AWS Route 53 was used to manage the DNS records.
+      Mailgun services were used for transactional and contact emails via APIs. The styling is done with pure CSS. Storage facilities like Cloudinary have been used for video storage.
+      A mock yet fully working online shopping segment and a video streaming segment is exhibited for better understanding of developer skills. `}</div>
 
     return (
       <div className="home"> 
