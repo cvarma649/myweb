@@ -15,11 +15,11 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  padding-bottom: 350px;
-  margin-bottom: 0px;
+ 
+  margin-bottom: -50px;
   margin-top: 10px;
   width: 50vw;
-  height: 90vh;
+  height: 38vh;
 }
 
 h1 {
@@ -50,7 +50,7 @@ p {
     width: 70vw;
     height: 20vh;
     padding-top: 10vh;
-    padding-bottom: 45vh;
+    padding-bottom: 2vh;
     position: relative;
     color: rgb(157, 240, 74);
     display: flex;
