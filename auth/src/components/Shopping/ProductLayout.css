@@ -71,7 +71,7 @@
   display: flex;
   align-content: center;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-y: scroll;
   margin-bottom: 30px;
 }
 
@@ -230,13 +230,13 @@
   }
 
     .bach {
-     width: 65vw;
+    width: 49vw;
     padding-top: 40px;
     padding-bottom: 40px;
     padding: 10px;
     line-height: 1.8;
     font-size: 13px;
-    width: 55vw;
+
   }
   
 }
