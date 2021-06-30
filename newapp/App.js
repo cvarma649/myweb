@@ -245,7 +245,7 @@ const knex11 = knex({
 })
 
 const imageUpload = multer({
-    dest: "../images"
+    dest: "~/apps/myweb/images"
 })
 
 app.post('/api/v1/image', imageUpload.single('image'), (req, res) => {
