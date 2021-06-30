@@ -16,7 +16,6 @@ function ForgotPassword() {
             body: JSON.stringify(body)
         })
         const parseRes = await res.json();
-        console.log(parseRes)
         setSuccessMessage(parseRes.message)
         
     }
