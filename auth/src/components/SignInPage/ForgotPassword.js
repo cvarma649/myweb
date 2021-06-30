@@ -36,7 +36,7 @@ function ForgotPassword() {
                 <div className="submit">
                 <button  type="submit">Send Reset Link</button>
                 </div>
-                <div className="success-message"><p> &nsp; &nsp; {successMessage}</p></div>
+                <div className="success-message"><p>{"     "}{successMessage}</p></div>
             </form> 
             </div>
         </div>
