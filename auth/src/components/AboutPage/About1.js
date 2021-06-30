@@ -15,7 +15,7 @@ function About1() {
          Here, you can sit-back while you Window-shop, watch an Animated video and
          learn a little about me!  </p>
    
-         <p className="small-text">Look out for small buttons saying "know how" to understand what I have done where!
+         <p className="small-text">Look out for small buttons saying "know how",like the one below ↓, to understand what I have done where!
          Happy Scrolling!</p>
          
        
