@@ -53,6 +53,9 @@ hr {
     padding: 0;
     box-sizing: border-box;
   }
+  html{
+    overflow-x: hidden !important;
+  }
   body {
     overflow-x: hidden !important;
     overflow-y: auto;
