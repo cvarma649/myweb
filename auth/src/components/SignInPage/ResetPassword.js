@@ -19,7 +19,7 @@ function ResetPassword(props) {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(body)
         })
-        const parseRes= await res.json()
+        const parseRes= await res.json();
    
         if(parseRes.resetAuth===true){
         setSuccessMessage("Password Reset! You can Sign In Now!");
