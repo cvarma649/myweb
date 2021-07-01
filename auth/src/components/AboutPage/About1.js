@@ -12,7 +12,7 @@ function About1() {
          <p>Welcome to my Portfolio Website!</p>
          <p>
         
-         Here, you can sit-back while you Window-shop, watch an Animated video and
+         Here, you can sit-back while you Window-shop, watch my Video Animation and
          learn a little about me!  </p>
    
          <p className="small-text">Look out for small buttons saying "know how",like the one below ↓, to understand what I have done where!
