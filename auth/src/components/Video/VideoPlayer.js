@@ -32,7 +32,7 @@ const hey=()=>console.log(video);
         <div>
             <div key={video.video_id}>
             <ReactPlayer className="react-player" url={`${process.env.REACT_APP_VIDEOURL}/${video.video}`} controls="true" width='70%'
-          height='70%' controlsList="nodownload"/>
+          height='70%' config={{ file: { attributes: {controlsList: 'nodownload'}/>
         </div>
         </div>
     )
