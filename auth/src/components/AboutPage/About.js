@@ -22,14 +22,13 @@ function About() {
                     My portfolio website that I have tried to make in such a way that a fresher like me can exhibit my skills 
                     as extensively as possible at a single place! My journey here has been an incomparable learning experience. 
                     One of the approaches I followed was - finding out what is to be learnt next in order to solve a particular 
-                    problem. Relational Tables, password bcrypt, multer, cloudinary, using Postman are a few examples of the things I learnt in this way!
-                    - which made me understand what I read more comprehensively!  
+                    problem. Relational Tables, password bcrypt, multer, cloudinary, using Postman are a few examples of the things I learnt in this way! 
                 `}
                 <br/>
                 <br/>
                 {`
                     Other than development itself, on this odyssey, I found myself learning a great deal of perseverance, problem solving skills,
-                    patience and an uncanny ability and desire to learn whatever I set my mind to. I write this on 18-06-2021, and I dare say
+                    patience and realised an uncanny ability and desire to learn whatever I set my mind to. I write this on 18-06-2021, and I dare say
                     I feel absolutely ecstatic with how far I have come!
                 `}
                  <br/>
