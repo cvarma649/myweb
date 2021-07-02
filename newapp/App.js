@@ -406,11 +406,13 @@ app.put("/api/v1/reset-password/:jT", urlencoder, async(req,res,next)=>{
 
 app.post("/api/v1/contact", async(req,res)=>{
     const {message,email}=req.body
+    const emailSent= await pool.query("INSERT INTO hire_info(hirer_email,message) VALUES($1,$2)",[email,message]) 
+    if(emailSent){
     try {
         const data={
             from: email,
             to:"cvarma649@gmail.com",
-            subject:"Hire Email",
+            subject:"Reset Password",
             text: message
                     }
         
@@ -419,8 +421,11 @@ app.post("/api/v1/contact", async(req,res)=>{
             res.json("Hire Mail Sent Successfully")
     } catch (error) {
         console.error(error.message)
+    }} else{
+        res.json("Not sent")
     }
 })
+
 
 
 /////////////////////////////////////////////////////////////////////
