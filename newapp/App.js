@@ -412,7 +412,7 @@ app.post("/api/v1/contact", async(req,res)=>{
         const data={
             from: email,
             to:"cvarma649@gmail.com",
-            subject:"Reset Password",
+            subject:"Hire Email",
             text: message
                     }
         
