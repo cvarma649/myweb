@@ -72,11 +72,16 @@
     display: unset;
     margin: 0 auto;
   }
+  .img-contain {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
   .img-contain img {
     padding-bottom: 1vh;
     padding-top: 0;
     margin-top: 7px;
-    margin-left: 16vw;
+    
     min-width: 250px !important;
   }
   .big_contain {
