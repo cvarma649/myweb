@@ -10,19 +10,18 @@ function About() {
                     Hey! Ever wondered what happens when someone sets out on a journey to learn "Programming" 
                     with no Computer Science background what-so-ever, no curriculum, no Table of Contents, no mentor, no-one to ask
                     your doubts to, just a glut of information to read, tutorials to watch and endless codes on Stack Overflow! 
-                    Either you give up after a few hours of tutorials or the whole pursuit turns into a thrilling game 
-                    giving you that adrenaline rush as you crush one level after another.
-                    What I can tell you for sure is, all the talks of "Be passionate about what you do", 
+                    Either you give up after a few hours of tutorials or the whole experience turns into an adrineline pumping pursuit 
+                    as you crush one level after another. What I can tell you for sure is, all the talks of "Be passionate about what you do", 
                     "Work Hard, Work Smart", "Do what you Love" start to make a lot of sense.
                     `}
                 <br/>
                 <br/>
                 {`
                     I started learning React Js, actually Javascript itself in October 2020, and thus far I have created this.
-                    My portfolio website that I have tried to make in such a way that a fresher like me can exhibit my skills 
-                    as extensively as possible at a single place! My journey here has been an incomparable learning experience. 
+                    This portfolio website is designed in such a way that my skills can be exhibited as extensively as possible.
+                    My journey here has been an incomparable learning experience. 
                     One of the approaches I followed was - finding out what is to be learnt next in order to solve a particular 
-                    problem. Relational Tables, password bcrypt, multer, cloudinary, using Postman are a few examples of the things I learnt in this way! 
+                    problem. Relational Tables, Password Bcrypt, Multer, Cloudinary, using Postman are a few examples of the things I learnt in this way! 
                 `}
                 <br/>
                 <br/>
