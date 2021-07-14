@@ -45,7 +45,7 @@ function SignIn({setAuth}) {
 
 const responseGoogleS=async(res)=>{
     const g_user = await res.profileObj
-    console.log(g_user)
+    //console.log(g_user)
     const g_user_name=g_user.name
     const g_user_email=g_user.email
     const body={g_user_name, g_user_email}
