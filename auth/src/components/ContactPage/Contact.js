@@ -40,7 +40,7 @@ else{
                     <textarea id="message" value={message} onChange={e=>setMessage(e.target.value)} type="text" />
                 </div>
                 <div className="submit">
-                <button  type="submit">Hire Me!</button>
+                <button  type="submit">Contact Me</button>
                 </div>
                 <div className="success-message"><p>{successMessage}</p></div>
                 <div className="contact-list">
