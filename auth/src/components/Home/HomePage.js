@@ -29,9 +29,9 @@ function HomePage({auth}) {
         getName()
       })
    const content= <div className="bach2">
-      {`This website is a ReactJs website built with the help of NodeJs with an Express Server and Postgresql Database. 
+      {`This website is built with ReactJs and NodeJs with an Express Server and Postgresql Database. 
       Nginx was used to configure the server proxy on an AWS EC2 Ubuntu 20.0.4 server. AWS Route 53 was used to manage the DNS records.
-      Mailgun services were used for transactional and contact emails via APIs. The styling is done with pure CSS. Storage facilities like Cloudinary have been used for video storage.
+      Mailgun services were used for transactional and contact emails via APIs. The styling is done with pure CSS. Cloud storage facilities like Cloudinary have been used for video storage.
       A mock yet fully working online shopping segment and a video streaming segment is exhibited for better understanding of developer skills. `}</div>
 
     return (
